@@ -1,0 +1,23 @@
+CREATE DATABASE UNIVERSIDAD;
+USE UNIVERSIDAD;
+CREATE TABLE ESTUDIANTE(
+id_estudiante int primary key auto_increment,
+documento bigint,
+nombre varchar(20),
+apellido varchar(20),
+valorMatricula int);
+
+CREATE TABLE PROFESOR(
+documento_p INT PRIMARY KEY,
+nombre_p VARCHAR(30),
+telefono_p VARCHAR(15),
+direccion_p VARCHAR(30),
+titulo VARCHAR(30),
+fecha_registro DATETIME);
+
+select * from profesor;
+
+select id_estudiante from estudiante where documento=3;
+select * from estudiante;
+delete from estudiante where id_estudiante=3;
+update estudiante set tipo="tarjeta",documento=10,nombre="yeferson",apellido="checho",valorMatricula=120000 where id_estudiante=6;
